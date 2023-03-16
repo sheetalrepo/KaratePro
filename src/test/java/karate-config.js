@@ -15,6 +15,7 @@ function fn() {
   	config.userName = 'Sheetal Dev'
   	config.userJob = 'Karate-Trainer'  
   }
+  
   if (env == 'qa') {
   	config.userName = 'Sheetal QA'
   	config.userJob = 'Karate-Trainer'  
@@ -22,5 +23,6 @@ function fn() {
   else if (env == 'e2e') {
     // customize
   }
+  
   return config;
 }

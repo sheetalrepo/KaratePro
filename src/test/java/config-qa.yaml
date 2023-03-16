@@ -1,0 +1,6 @@
+---
+urls:
+  authUrl: http://abc.com/authenticate
+  otherUrl: http://abc.com/other
+defaultUsername: abc
+defaultAuthmode: basic

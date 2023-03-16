@@ -1,0 +1,6 @@
+---
+urls:
+  authUrl: http://qa.abc.com/authenticate
+  otherUrl: http://qa.abc.com/other
+defaultUsername: qa_abc
+defaultAuthmode: basic

@@ -5,7 +5,6 @@ Feature: Basic Karate Test Script
   Background: Common steps will come here
     Given url 'https://reqres.in/api'
 
-	@prodbug
   Scenario: Testing Background and Path 
     Given path 'users'
     When method Get
@@ -14,8 +13,8 @@ Feature: Basic Karate Test Script
 
 	#https://reqres.in/api/users?page=2
   Scenario: Testing Query Parameters
+    Given path 'users'
     #Given param page = 2
     Given params {page:2}
-    Given path 'users'
     When method Get
     Then status 200

@@ -9,7 +9,9 @@ Feature: Basic Karate Test Script
     Given url 'https://reqres.in/api/users'
     When method Get
     Then status 200
+    And print response
 
+  @ignore
   Scenario: Passing Query Parameters in URL
     Given url 'https://reqres.in/api/users?page=2'
     When method Get

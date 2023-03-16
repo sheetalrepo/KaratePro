@@ -1,0 +1,6 @@
+---
+jdbc-url: ""
+driver-class-name: com.jdbcDriver
+username: abc
+password: password
+health-query: Select 1 from TableName

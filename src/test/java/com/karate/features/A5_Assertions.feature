@@ -1,14 +1,16 @@
 Feature: Basic Karate Test Script
 
-  #match    text, int matching
-  #object
-  #array
-  #array length    '#[size]'
-  #contains ['5','6']
-  #contains any ['5','6']
-  #!contains ['5','6']
+  # match    text, int matching
+  # object
+  # array
+  # array length    '#[size]'
+  # contains ['5','6']
+  # contains any ['5','6']
+  # !contains ['5','6']
   # wild card *
   # ..  random search in all response
+  # schema validation
+  
   Background: Common steps will come here
     Given url 'https://reqres.in/api'
 
@@ -40,7 +42,11 @@ Feature: Basic Karate Test Script
     Given path 'users'
     When method Get
     Then status 200
-    And match response.data[0] ==
+    #Note: To test single node
+    #And match response.data[0] ==              
+    
+    #Note: To test all nodes will use each
+    And match each response.data ==
       """
       {
       "id":'#number',

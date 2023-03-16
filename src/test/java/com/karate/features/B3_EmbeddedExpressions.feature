@@ -6,7 +6,6 @@ Feature: Adv Karate Test Script
 
   Scenario: Testing Embedded Expressions
     Given path 'users'
-    #And request {"name": "Sheetal","job": "Trainer"}
     And def jsonRequestObj = {"name": "Sheetal","job": "Karate-Trainer"}
     And request {"name": "#(jsonRequestObj.name)","job": "#(jsonRequestObj.job)"}
     When method Post
